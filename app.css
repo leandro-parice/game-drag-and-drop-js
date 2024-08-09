@@ -1,0 +1,125 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, sans-serif;
+	position: relative;
+}
+
+html,
+body {
+	width: 100%;
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#page-game {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-family: Arial, sans-serif;
+	min-height: 100vh;
+	width: 100%;
+}
+
+#target {
+	width: 550px;
+	height: 550px;
+	padding: 20px;
+	border: 2px solid #000;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+	justify-content: center;
+	align-items: center;
+	background-color: #f9f9f9;
+	position: relative;
+	z-index: 2000;
+}
+
+#target .draggable {
+	width: 150px;
+	height: 150px;
+	background-color: #76c7c0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: move;
+	user-select: none;
+	font-size: 40px;
+	position: absolute;
+}
+
+.animate {
+	transition: left 0.3s ease, top 0.3s ease;
+}
+
+#draggable-1,
+#draggable-2,
+#draggable-3 {
+	top: 20px;
+}
+
+#draggable-4,
+#draggable-5,
+#draggable-6 {
+	top: 190px;
+}
+
+#draggable-7,
+#draggable-8,
+#draggable-9 {
+	top: 360px;
+}
+
+#draggable-1,
+#draggable-4,
+#draggable-7 {
+	left: 20px;
+}
+
+#draggable-2,
+#draggable-5,
+#draggable-8 {
+	left: 190px;
+}
+
+#draggable-3,
+#draggable-6,
+#draggable-9 {
+	left: 360px;
+}
+
+#players {
+	width: 100%;
+	max-width: 550px;
+	height: 140px;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 1000;
+}
+
+#players .dropzone {
+	background-color: #e0e0e0;
+	width: 200px;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#message {
+	font-size: 24px;
+	color: green;
+	margin-top: 20px;
+	z-index: 3000;
+}
